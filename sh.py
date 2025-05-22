@@ -95,7 +95,7 @@ async def check_card(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
             await update.message.reply_text("Invalid format. Use: /sh <card_number>|MM|YYYY|CVV")
             return
 
-        card_number, exp_month-va, exp_year, cvv = card_parts
+        card_number, exp_month, exp_year, cvv = card_parts
 
         # Validate card input
         if not (card_number.isdigit() and len(card_number) == 16 and
