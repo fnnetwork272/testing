@@ -477,12 +477,15 @@ async def redeem(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     keys_collection.update_one({"key": key}, {"$set": {"used": True}})
 
-    await update.message.reply_text(
-        f"𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧 🎉\n\n"
-        f"𝐘𝐨𝐮𝐫 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧 𝐈𝐬 𝐍𝐨𝐰 𝐀𝐜𝐭𝐢𝐯𝐚�{t𝐞𝐝 ✅\n\n"
-        f"𝐕𝐚𝐥𝐮𝐞: {key_data['tier']} {key_data['duration_days']} days\n\n"
-        f"𝐓𝐡𝐚𝐧𝐤𝐘𝐨𝐮"
-    )
+await update.message.reply_text(
+    f"""𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧 🎉
+
+𝐘𝐨𝐮𝐫 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧 𝐈𝐬 𝐍𝐨𝐰 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝 ✅
+
+𝐕𝐚𝐥𝐮𝐞: {key_data['tier']} {key_data['duration_days']} days
+
+𝐓𝐡𝐚𝐧𝐤𝐘𝐨𝐮"""
+)
     logger.info("200 OK: Key redeemed")
 
 async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE):
