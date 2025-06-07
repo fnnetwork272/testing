@@ -94,7 +94,7 @@ def generate_address():
     streets = ["Baker St", "Oxford St"]
     zips = ["SW1A 1AA", "M1 1AE"]
     city = random.choice(cities)
-    return city, "England", f"{random.randint(1, 999)} {random.choice(streets)}", random.choice(zips)
+    return city, "London", f"{random.randint(1, 999)} {random.choice(streets)}", random.choice(zips)
 
 def generate_email():
     return ''.join(random.choices(string.ascii_lowercase, k=10)) + "@gmail.com"
