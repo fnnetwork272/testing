@@ -1,5 +1,8 @@
 python-telegram-bot==20.7
-aiohttp
+aiohttp==3.9.1
+motor==3.5.1
+beautifulsoup4==4.12.2
+user_agent==0.1.10
 colorama
 pymongo
 python-dateutil
@@ -7,9 +10,6 @@ flask
 requests
 pycountry
 python-telegram-bot
-beautifulsoup4
 nest_asyncio
-motor
-user_agent
 dotenv
 python-telegram-bot[job-queue]==20.7
